@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skin Resource Pack Generator</title>
+  <meta name="description" content="Generate Minecraft skin resource packs for Toi's Item Animator">
   <link rel="stylesheet" href="index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 </head>
@@ -11,8 +12,11 @@
   <div class="container">
     <div class="card">
       <div class="header">
-        <h1>🎮 Skin Resource Pack Generator</h1>
-        <p class="subtitle">Toi's Item Animator用</p>
+        <div class="header-top">
+          <h1>🎮 Skin Resource Pack Generator</h1>
+          <button id="lang-toggle" class="lang-toggle" title="Switch language">EN</button>
+        </div>
+        <p class="subtitle" data-i18n="subtitle">Toi's Item Animator用</p>
       </div>
 
       <div class="input-section">
@@ -21,12 +25,13 @@
           <input 
             type="text" 
             id="mcid" 
+            data-i18n-placeholder="placeholder_mcid"
             placeholder="例: Notch" 
             autocomplete="off"
             spellcheck="false"
           >
           <button id="fetch-btn" class="btn primary">
-            <span class="btn-text">取得</span>
+            <span class="btn-text" data-i18n="btn_fetch">取得</span>
             <span class="btn-loader"></span>
           </button>
         </div>
@@ -35,13 +40,13 @@
 
       <div id="preview-section" class="preview-section hidden">
         <div class="preview-header">
-          <h2>スキンプレビュー</h2>
+          <h2 data-i18n="preview_title">スキンプレビュー</h2>
           <span id="player-name" class="player-name"></span>
         </div>
         <div class="preview-container">
           <img id="skin-preview" alt="Minecraft Skin" />
         </div>
-        <button id="download-btn" class="btn success">
+        <button id="download-btn" class="btn success" data-i18n="btn_download">
           📦 リソースパックをダウンロード
         </button>
       </div>
