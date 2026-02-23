@@ -219,7 +219,7 @@ async function handleDownload() {
 
   try {
     const zipBlob = await generateResourcePack(currentSkinBlob);
-    downloadBlob(zipBlob, 'Skin resourcepack for RPG.zip');
+    downloadBlob(zipBlob, 'Resourcepack for Item Animator.zip');
   } catch (error) {
     showError(t('err_generate'));
     console.error(error);
